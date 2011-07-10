@@ -37,7 +37,6 @@ sub get {
 	my ($code) = _get_content($pod_abstract, $section, $number_of_example);
 
 	return $code;
-
 }
 
 # Get content in Pod::Abstract object.
@@ -58,23 +57,22 @@ sub _get_content {
 		$section .= '\d*';
 	}
 
-	# Get all sections.
-	my @sections = $pod_abstract->select('/head1[@heading =~ {'.
+	# Get first section.
+	my ($pod_section) = $pod_abstract->select('/head1[@heading =~ {'.
 		$section.'}]');
-	my @ret;
-	foreach my $section (@sections) {
 
-		# Remove #cut.
-		my @cut = $section->select("//#cut");
-		foreach my $cut (@cut) {
-			$cut->detach;
-		}
-
-		# Get pod.
-		my @child = $section->children;
-		push @ret, _remove_spaces($child[0]->pod);
+	# Remove #cut.
+	my @cut = $pod_section->select("//#cut");
+	foreach my $cut (@cut) {
+		$cut->detach;
 	}
-	return @ret;
+
+	# Get pod.
+	my @child = $pod_section->children;
+	my $child_pod = join '', map { $_->pod } @child;
+
+	# Remove spaces and return.
+	return _remove_spaces($child_pod);
 }
 
 # Remove spaces from example.
@@ -88,7 +86,7 @@ sub _remove_spaces {
 		if (! length $line) {
 			next;
 		}
-		my $spaces = $line =~ m/^(\ *)/ms;
+		my $spaces = $line =~ m/^(\ +)/ms;
 		if ($max == 0 || length $spaces < $max) {
 			$max = length $spaces;
 		}
