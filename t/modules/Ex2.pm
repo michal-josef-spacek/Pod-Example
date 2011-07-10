@@ -1,4 +1,4 @@
-package Ex2;
+package Ex1;
 
 # Version.
 our $VERSION = 0.01;
@@ -9,11 +9,11 @@ our $VERSION = 0.01;
 
 =head1 EXAMPLE
 
-# Pragmas.
-use strict;
-use warnings;
+ # Pragmas.
+ use strict;
+ use warnings;
 
-# Print.
-print "Foo.\n";
+ # Print.
+ print "Foo.\n";
 
 =cut
