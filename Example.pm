@@ -88,7 +88,10 @@ sub _remove_spaces {
 			next;
 		}
 		$line =~ m/^(\ +)/ms;
-		my $spaces = $1 || $EMPTY_STR;
+		my $spaces = $EMPTY_STR;
+		if ($1) {
+			$spaces = $1;
+		}
 		if ($max == 0 || length $spaces < $max) {
 			$max = length $spaces;
 		}
