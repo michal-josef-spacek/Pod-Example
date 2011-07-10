@@ -3,10 +3,9 @@ use strict;
 use warnings;
 
 # Modules.
-use Pod::Example qw(get);
-use English qw(-no_match_vars);
 use File::Object;
-use Test::More 'tests' => 4;
+use Pod::Example qw(get);
+use Test::More 'tests' => 6;
 
 # Modules dir.
 my $modules_dir = File::Object->new->up->dir('modules');
@@ -22,18 +21,27 @@ use warnings;
 print "Foo.\n";
 END
 chomp $right_ret;
-is($ret, $right_ret, 'Example with simple print().');
+is($ret, $right_ret, 'Example.');
+
+# Test.
+$ret = get($modules_dir->file('Ex1.pm')->s, 'EXAMPLE');
+is($ret, $right_ret, 'Example with explicit section.');
 
 # Test.
 $ret = get($modules_dir->file('Ex2.pm')->s);
 is($ret, $right_ret, 'Example as EXAMPLE1.');
 
 # Test.
-$ret = get($modules_dir->file('Ex2.pm')->s, 1);
-is($ret, $right_ret, 'Example as EXAMPLE1 with explicit example number.');
+$ret = get($modules_dir->file('Ex2.pm')->s, 'EXAMPLE');
+is($ret, $right_ret, 'Example as EXAMPLE1 with explicit section.');
 
 # Test.
-$ret = get($modules_dir->file('Ex2.pm')->s, 2);
+$ret = get($modules_dir->file('Ex2.pm')->s, 'EXAMPLE', 1);
+is($ret, $right_ret, 'Example as EXAMPLE1 with explicit example section '.
+	'and number.');
+
+# Test.
+$ret = get($modules_dir->file('Ex2.pm')->s, 'EXAMPLE', 2);
 $right_ret = <<'END';
 # Pragmas.
 use strict;
@@ -43,4 +51,5 @@ use warnings;
 print "Bar.\n";
 END
 chomp $right_ret;
-is($ret, $right_ret, 'Example as EXAMPLE2 with explicit example number.');
+is($ret, $right_ret, 'Example as EXAMPLE2 with explicit example section '.
+	'and number.');
