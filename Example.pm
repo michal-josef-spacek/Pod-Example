@@ -12,6 +12,7 @@ use Readonly;
 
 # Constants.
 Readonly::Array our @EXPORT_OK => qw(get);
+Readonly::Scalar my $EMPTY_STR => q{};
 
 # Version.
 our $VERSION = 0.01;
@@ -86,7 +87,8 @@ sub _remove_spaces {
 		if (! length $line) {
 			next;
 		}
-		my $spaces = $line =~ m/^(\ +)/ms;
+		$line =~ m/^(\ +)/ms;
+		my $spaces = $1 || $EMPTY_STR;
 		if ($max == 0 || length $spaces < $max) {
 			$max = length $spaces;
 		}
