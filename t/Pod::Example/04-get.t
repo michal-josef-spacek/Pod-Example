@@ -7,11 +7,16 @@ use File::Object;
 use Pod::Example qw(get);
 use Test::More 'tests' => 10;
 
-# Modules dir.
-my $modules_dir = File::Object->new->up->dir('modules');
+# Load module.
+my $modules_dir;
+BEGIN {
+	$modules_dir = File::Object->new->up->dir('modules');
+	unshift @INC, $modules_dir->s;	
+}
+use Ex1;
 
 # Test.
-my $ret = get($modules_dir->file('Ex1.pm')->s);
+my $ret = get('Ex1');
 my $right_ret = <<'END';
 # Pragmas.
 use strict;
