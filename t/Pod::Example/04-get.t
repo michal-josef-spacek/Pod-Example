@@ -28,20 +28,20 @@ $ret = get($modules_dir->file('Ex1.pm')->s, 'EXAMPLE');
 is($ret, $right_ret, 'Example with explicit section.');
 
 # Test.
-$ret = get($modules_dir->file('Ex2.pm')->s);
+$ret = get($modules_dir->file('Ex3.pm')->s);
 is($ret, $right_ret, 'Example as EXAMPLE1.');
 
 # Test.
-$ret = get($modules_dir->file('Ex2.pm')->s, 'EXAMPLE');
+$ret = get($modules_dir->file('Ex3.pm')->s, 'EXAMPLE');
 is($ret, $right_ret, 'Example as EXAMPLE1 with explicit section.');
 
 # Test.
-$ret = get($modules_dir->file('Ex2.pm')->s, 'EXAMPLE', 1);
+$ret = get($modules_dir->file('Ex3.pm')->s, 'EXAMPLE', 1);
 is($ret, $right_ret, 'Example as EXAMPLE1 with explicit example section '.
 	'and number.');
 
 # Test.
-$ret = get($modules_dir->file('Ex2.pm')->s, 'EXAMPLE', 2);
+$ret = get($modules_dir->file('Ex3.pm')->s, 'EXAMPLE', 2);
 $right_ret = <<'END';
 # Pragmas.
 use strict;
