@@ -5,7 +5,7 @@ use warnings;
 # Modules.
 use File::Object;
 use Pod::Example qw(get);
-use Test::More 'tests' => 6;
+use Test::More 'tests' => 7;
 
 # Modules dir.
 my $modules_dir = File::Object->new->up->dir('modules');
@@ -26,6 +26,10 @@ is($ret, $right_ret, 'Example.');
 # Test.
 $ret = get($modules_dir->file('Ex1.pm')->s, 'EXAMPLE');
 is($ret, $right_ret, 'Example with explicit section.');
+
+# Test.
+$ret = get($modules_dir->file('Ex2.pm')->s);
+is($ret, $right_ret, 'Example in POD as normal text (no verbatim).');
 
 # Test.
 $ret = get($modules_dir->file('Ex3.pm')->s);
