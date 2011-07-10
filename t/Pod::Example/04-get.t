@@ -5,7 +5,7 @@ use warnings;
 # Modules.
 use File::Object;
 use Pod::Example qw(get);
-use Test::More 'tests' => 10;
+use Test::More 'tests' => 11;
 
 # Load module.
 my $modules_dir;
@@ -94,3 +94,7 @@ END
 chomp $right_ret;
 is($ret, $right_ret, 'Another example with inconsistent spaces on begin '.
 	'of code');
+
+# Test.
+$ret = get($modules_dir->file('Ex1.pm')->s, 'NO_SECTION');
+is($ret, undef, 'No right section.');

@@ -62,6 +62,11 @@ sub _get_content {
 	my ($pod_section) = $pod_abstract->select('/head1[@heading =~ {'.
 		$section.'}]');
 
+	# No section.
+	if (! defined $pod_section) {
+		return;
+	}
+
 	# Remove #cut.
 	my @cut = $pod_section->select("//#cut");
 	foreach my $cut (@cut) {
