@@ -1,4 +1,4 @@
-package Ex1;
+package Ex2;
 
 # Version.
 our $VERSION = 0.01;
