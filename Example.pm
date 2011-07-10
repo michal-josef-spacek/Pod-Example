@@ -154,7 +154,7 @@ Pod::Example - Class for getting example from POD.
  use Pod::Example qw(get);
 
  # Get and print code.
- print get(__FILE__);
+ print get('Pod::Example')."\n";
 
  # Output:
  # This example.
