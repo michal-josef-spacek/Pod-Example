@@ -1,0 +1,10 @@
+Example.pm
+Makefile.PL
+MANIFEST			This list of files
+t/modules/Ex1.pm
+t/modules/Ex2.pm
+t/Pod::Example/00-use.t
+t/Pod::Example/01-version.t
+t/Pod::Example/02-pod_coverage.t
+t/Pod::Example/03-pod.t
+t/Pod::Example/04-get.t
