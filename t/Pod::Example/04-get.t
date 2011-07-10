@@ -5,7 +5,7 @@ use warnings;
 # Modules.
 use File::Object;
 use Pod::Example qw(get);
-use Test::More 'tests' => 8;
+use Test::More 'tests' => 9;
 
 # Modules dir.
 my $modules_dir = File::Object->new->up->dir('modules');
@@ -61,3 +61,17 @@ END
 chomp $right_ret;
 is($ret, $right_ret, 'Example as EXAMPLE2 with explicit example section '.
 	'and number.');
+
+# Test.
+$ret = get($modules_dir->file('Ex5.pm')->s);
+$right_ret = <<'END';
+ # Pragmas.
+use strict;
+use warnings;
+
+# Print.
+print "Foo.\n";
+END
+chomp $right_ret;
+is($ret, $right_ret, 'Example with inconsistent spaces on begin '.
+	'of code');
