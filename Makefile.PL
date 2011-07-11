@@ -18,6 +18,7 @@ WriteMakefile(
 	'CONFIGURE_REQUIRES' => {
 		'ExtUtils::MakeMaker' => 0,
 	},
+	'LICENSE' => 'bsd',
 	'NAME' => 'Pod::Example',
 	'PREREQ_PM' => {
 		'Class::Utils' => 0.01,
