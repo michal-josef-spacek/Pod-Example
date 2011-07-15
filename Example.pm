@@ -175,8 +175,9 @@ L<Readonly(3pm)>.
 
 =head1 AUTHOR
 
- Michal Špaček L<skim@cpan.org>
- http://skim.cz
+Michal Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
