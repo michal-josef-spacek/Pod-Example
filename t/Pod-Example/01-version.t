@@ -7,4 +7,4 @@ use Pod::Example;
 use Test::More 'tests' => 1;
 
 # Test.
-is($Pod::Example::VERSION, 0.01, 'Version.');
+is($Pod::Example::VERSION, 0.02, 'Version.');

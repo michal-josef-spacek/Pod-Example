@@ -33,4 +33,4 @@ resources:
     type: git
     url: git://github.com/tupinek/Pod-Example
     web: https://github.com/tupinek/Pod-Example
-version: 0.01
+version: 0.02

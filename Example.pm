@@ -15,7 +15,7 @@ Readonly::Array our @EXPORT_OK => qw(get);
 Readonly::Scalar my $EMPTY_STR => q{};
 
 # Version.
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 # Get content for file or module.
 sub get {
@@ -189,6 +189,6 @@ BSD license.
 
 =head1 VERSION
 
-0.01
+0.02
 
 =cut
