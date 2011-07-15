@@ -127,7 +127,7 @@ __END__
 
 =head1 NAME
 
-Pod::Example - Class for getting example from POD.
+Pod::Example - Module for getting example from POD.
 
 =head1 SYNOPSIS
 
