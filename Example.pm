@@ -131,9 +131,8 @@ Pod::Example - Module for getting example from POD.
 
 =head1 SYNOPSIS
 
- use Pod::Example;
- my $obj = Pod::Example->new(%parameters);
- my $example = $obj->get($file_or_module[, $section[, $number_of_example]]);
+ use Pod::Example qw(get);
+ my $example = get($file_or_module[, $section[, $number_of_example]]);
 
 =head1 SUBROUTINEs
 
