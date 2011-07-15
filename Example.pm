@@ -173,6 +173,10 @@ L<Module::Info(3pm)>,
 L<Pod::Abstract(3pm)>,
 L<Readonly(3pm)>.
 
+=head1 REPOSITORY
+
+L<https://github.com/tupinek/Pod-Example>
+
 =head1 AUTHOR
 
 Michal Špaček L<mailto:skim@cpan.org>
