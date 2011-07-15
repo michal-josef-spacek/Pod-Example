@@ -1,0 +1,48 @@
+NAME
+    Pod::Example - Module for getting example from POD.
+
+SYNOPSIS
+     use Pod::Example qw(get);
+     my $example = get($file_or_module[, $section[, $number_of_example]]);
+
+SUBROUTINEs
+    "get($file_or_module[, $section[, $number_of_example]])"
+             Returns code of example.
+             $file_or_module - File with pod doc or perl module.
+             $section - Pod section with example. Default value is 'EXAMPLE'.
+             $number_of_example - Number of example. Default value is first example.
+
+ERRORS
+     None.
+
+EXAMPLE
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use Pod::Example qw(get);
+
+     # Get and print code.
+     print get('Pod::Example')."\n";
+
+     # Output:
+     # This example.
+
+DEPENDENCIES
+    Exporter(3pm), Module::Info(3pm), Pod::Abstract(3pm), Readonly(3pm).
+
+REPOSITORY
+    <https://github.com/tupinek/Pod-Example>
+
+AUTHOR
+    Michal Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    BSD license.
+
+VERSION
+    0.01
+
