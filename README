@@ -30,7 +30,7 @@ EXAMPLE
      # This example.
 
 DEPENDENCIES
-    Exporter(3pm), Module::Info(3pm), Pod::Abstract(3pm), Readonly(3pm).
+    Exporter, Module::Info, Pod::Abstract, Readonly.
 
 REPOSITORY
     <https://github.com/tupinek/Pod-Example>
