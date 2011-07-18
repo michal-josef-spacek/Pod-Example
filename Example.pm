@@ -168,10 +168,10 @@ Pod::Example - Module for getting example from POD.
 
 =head1 DEPENDENCIES
 
-L<Exporter(3pm)>,
-L<Module::Info(3pm)>,
-L<Pod::Abstract(3pm)>,
-L<Readonly(3pm)>.
+L<Exporter>,
+L<Module::Info>,
+L<Pod::Abstract>,
+L<Readonly>.
 
 =head1 REPOSITORY
 
