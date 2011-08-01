@@ -1,3 +1,5 @@
+0.03
+
 0.02 (August 1, 2011)
 - Add check for noexistent Perl module. Add test for it.
 - Rewrite 03-pod.t to better version for Perl 5.6.
