@@ -6,6 +6,7 @@ use strict;
 use warnings;
 
 # Modules.
+use Error::Pure qw(err);
 use Module::Info;
 use Pod::Abstract;
 use Readonly;
@@ -28,7 +29,11 @@ sub get {
 
 	# Module.
 	} else {
-		$file = Module::Info->new_from_module($file_or_module)->file;
+		my $mod = Module::Info->new_from_module($file_or_module);
+		if (! $mod) {
+			err 'Cannot open pod file or Perl module.';
+		}
+		$file = $mod->file;
 	}
 
 	# Get pod.
@@ -149,7 +154,8 @@ Pod::Example - Module for getting example from POD.
 
 =head1 ERRORS
 
- None.
+ Mine:
+         Cannot open pod file or Perl module.
 
 =head1 EXAMPLE
 
@@ -168,6 +174,7 @@ Pod::Example - Module for getting example from POD.
 
 =head1 DEPENDENCIES
 
+L<Error::Pure>,
 L<Exporter>,
 L<Module::Info>,
 L<Pod::Abstract>,

@@ -23,6 +23,7 @@ no_index:
     - inc
     - t
 requires:
+  Error::Pure: 0.05
   Exporter: 0
   Module::Info: 0
   Pod::Abstract: 0
