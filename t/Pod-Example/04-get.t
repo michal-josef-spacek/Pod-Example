@@ -3,9 +3,10 @@ use strict;
 use warnings;
 
 # Modules.
+use English qw(-no_match_vars);
 use File::Object;
 use Pod::Example qw(get);
-use Test::More 'tests' => 11;
+use Test::More 'tests' => 12;
 
 # Load module.
 my $modules_dir;
@@ -98,3 +99,10 @@ is($ret, $right_ret, 'Another example with inconsistent spaces on begin '.
 # Test.
 $ret = get($modules_dir->file('Ex1.pm')->s, 'NO_SECTION');
 is($ret, undef, 'No right section.');
+
+# Test.
+eval {
+	get('BAD_MODULE');
+};
+is($EVAL_ERROR, "Cannot open pod file or Perl module.\n",
+	'Cannot open pod file or Perl module.');
