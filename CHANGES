@@ -1,4 +1,5 @@
 0.03
+- New version of build system.
 
 0.02 (August 1, 2011)
 - Add check for noexistent Perl module. Add test for it.
