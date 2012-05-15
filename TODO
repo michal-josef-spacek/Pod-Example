@@ -3,7 +3,8 @@ TODO
 1. Algoritmus odstraneni opakujicich se mezer presunout do nejakeho Text::*
    modulu.
    Text::Outdent - otestovat muj algoritmus oproti tomuto.
-3.
+3. Testy pro sections().
+4.
 
 Applied
 =======
