@@ -12,7 +12,7 @@ use Pod::Abstract;
 use Readonly;
 
 # Constants.
-Readonly::Array our @EXPORT_OK => qw(get);
+Readonly::Array our @EXPORT_OK => qw(get sections);
 Readonly::Scalar my $EMPTY_STR => q{};
 
 # Version.
@@ -22,22 +22,8 @@ our $VERSION = 0.03;
 sub get {
 	my ($file_or_module, $section, $number_of_example) = @_;
 
-	# Module file.
-	my $file;
-	if (-r $file_or_module) {
-		$file = $file_or_module;
-
-	# Module.
-	} else {
-		my $mod = Module::Info->new_from_module($file_or_module);
-		if (! $mod) {
-			err 'Cannot open pod file or Perl module.';
-		}
-		$file = $mod->file;
-	}
-
-	# Get pod.
-	my $pod_abstract = Pod::Abstract->load_file($file);
+	# Get Pod::Abstract object.
+	my $pod_abstract = _pod_abstract($file_or_module);
 
 	# Get section pod.
 	my ($code) = _get_content($pod_abstract, $section, $number_of_example);
@@ -45,27 +31,29 @@ sub get {
 	return $code;
 }
 
+# Get example sections.
+sub sections {
+	my ($file_or_module, $section) = @_;
+
+	# Get Pod::Abstract object.
+	my $pod_abstract = _pod_abstract($file_or_module);
+
+	# Get first section.
+	my @pod_sections = _get_sections($pod_abstract, $section);
+
+	# Get section names.
+	my @sections = map { _get_section_name($_) } @pod_sections;
+
+	return @sections;
+}
+
 # Get content in Pod::Abstract object.
 sub _get_content {
 	my ($pod_abstract, $section, $number_of_example) = @_;
 
-	# Default section.
-	if (! $section) {
-		$section = 'EXAMPLE';
-	}
-
-	# Concerete number of example.
-	if ($number_of_example) {
-		$section .= $number_of_example;
-
-	# Number of example as potential number.
-	} else {
-		$section .= '\d*';
-	}
-
 	# Get first section.
-	my ($pod_section) = $pod_abstract->select('/head1[@heading =~ {'.
-		$section.'}]');
+	my ($pod_section) = _get_sections($pod_abstract, $section,
+		$number_of_example);
 
 	# No section.
 	if (! defined $pod_section) {
@@ -84,6 +72,58 @@ sub _get_content {
 
 	# Remove spaces and return.
 	return _remove_spaces($child_pod);
+}
+
+# Get section name.
+# XXX Hack to structure.
+sub _get_section_name {
+	my $pod_abstract_node = shift;
+	return $pod_abstract_node->{'params'}->{'heading'}->{'tree'}
+		->{'nodes'}->[0]->{'body'};
+}
+
+# Get sections.
+sub _get_sections {
+	my ($pod_abstract, $section, $number_of_example) = @_;
+
+	# Default section.
+	if (! $section) {
+		$section = 'EXAMPLE';
+	}
+
+	# Concerete number of example.
+	if ($number_of_example) {
+		$section .= $number_of_example;
+
+	# Number of example as potential number.
+	} else {
+		$section .= '\d*';
+	}
+
+	# Get and return sections.
+	return $pod_abstract->select('/head1[@heading =~ {'.$section.'}]');
+}
+
+# Get pod abstract for module.
+sub _pod_abstract {
+	my $file_or_module = shift;
+
+	# Module file.
+	my $file;
+	if (-r $file_or_module) {
+		$file = $file_or_module;
+
+	# Module.
+	} else {
+		my $mod = Module::Info->new_from_module($file_or_module);
+		if (! $mod) {
+			err 'Cannot open pod file or Perl module.';
+		}
+		$file = $mod->file;
+	}
+
+	# Get and return pod.
+	return Pod::Abstract->load_file($file);
 }
 
 # Remove spaces from example.
@@ -136,10 +176,11 @@ Pod::Example - Module for getting example from POD.
 
 =head1 SYNOPSIS
 
- use Pod::Example qw(get);
+ use Pod::Example qw(get sections);
  my $example = get($file_or_module[, $section[, $number_of_example]]);
+ my @sections = sections($file_or_module[, $section]);
 
-=head1 SUBROUTINEs
+=head1 SUBROUTINES
 
 =over 8
 
@@ -150,6 +191,12 @@ Pod::Example - Module for getting example from POD.
  $section - Pod section with example. Default value is 'EXAMPLE'.
  $number_of_example - Number of example. Default value is first example.
 
+=item C<sections($file_or_module[, $section])>
+
+ Returns array of example sections.
+ $file_or_module - File with pod doc or perl module.
+ $section - Pod section with example. Default value is 'EXAMPLE'.
+
 =back
 
 =head1 ERRORS
@@ -157,7 +204,7 @@ Pod::Example - Module for getting example from POD.
  Mine:
          Cannot open pod file or Perl module.
 
-=head1 EXAMPLE
+=head1 EXAMPLE1
 
  # Pragmas.
  use strict;
@@ -171,6 +218,23 @@ Pod::Example - Module for getting example from POD.
 
  # Output:
  # This example.
+
+=head1 EXAMPLE2
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Pod::Example qw(sections);
+
+ # Get and print code.
+ print join "\n", sections('Pod::Example');
+ print "\n";
+
+ # Output:
+ # EXAMPLE1
+ # EXAMPLE2
 
 =head1 DEPENDENCIES
 
