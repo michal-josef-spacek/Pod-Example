@@ -5,7 +5,7 @@ author:
 build_requires:
   English: 0
   ExtUtils::MakeMaker: 6.36
-  File::Object: 0.01
+  File::Object: 0.05
   Test::More: 0
   Test::Pod: 0
   Test::Pod::Coverage: 0
@@ -25,15 +25,14 @@ no_index:
     - inc
     - t
 requires:
-  Error::Pure: 0.07
+  Error::Pure: 0.08
   Exporter: 0
   Module::Info: 0
   Pod::Abstract: 0
   Readonly: 0
 resources:
+  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Pod-Example
+  homepage: https://github.com/tupinek/Pod-Example
   license: http://opensource.org/licenses/bsd-license.php
-  repository:
-    type: git
-    url: git://github.com/tupinek/Pod-Example
-    web: https://github.com/tupinek/Pod-Example
+  repository: git://github.com/tupinek/Pod-Example
 version: 0.03
