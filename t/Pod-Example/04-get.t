@@ -6,7 +6,8 @@ use warnings;
 use English qw(-no_match_vars);
 use File::Object;
 use Pod::Example qw(get);
-use Test::More 'tests' => 12;
+use Test::More 'tests' => 13;
+use Test::NoWarnings;
 
 # Load module.
 my $modules_dir;
