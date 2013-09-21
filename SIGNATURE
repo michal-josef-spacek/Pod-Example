@@ -1,0 +1,54 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.70.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 7a8f5e222b5accf8e698c5e82fe2bcc6ca7b2db7 Changes
+SHA1 885847d40537ebf70ab5904186d43683901f06fd Example.pm
+SHA1 1cdc3147974f90dcdeb05e8f21c14ac0d2e0dfbf MANIFEST
+SHA1 977398e48dc61c92ef8a474874be60a1fa5a4aa1 META.yml
+SHA1 f42639cbc40c383a934b28be6d2c34501089712f Makefile.PL
+SHA1 35bd811e2731183f2d0797f2ed66f29ead832525 README
+SHA1 b945b0700d46791e1fdc605567b65cf38c05c0ad examples/ex1.pl
+SHA1 cd17d2deadc3f9b92f1dce8027e4574c699e88d9 examples/ex2.pl
+SHA1 8a924add836b60fb23b25c8506d45945e02f42f4 inc/Module/Install.pm
+SHA1 2d0fad3bf255f8c1e7e1e34eafccc4f595603ddc inc/Module/Install/Base.pm
+SHA1 f0e01fff7d73cd145fbf22331579918d4628ddb0 inc/Module/Install/Can.pm
+SHA1 7328966e4fda0c8451a6d3850704da0b84ac1540 inc/Module/Install/Fetch.pm
+SHA1 b62ca5e2d58fa66766ccf4d64574f9e1a2250b34 inc/Module/Install/Makefile.pm
+SHA1 1aa925be410bb3bfcd84a16985921f66073cc1d2 inc/Module/Install/Metadata.pm
+SHA1 e4196994fa75e98bdfa2be0bdeeffef66de88171 inc/Module/Install/Win32.pm
+SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
+SHA1 6b2b8eeb21b564cbe1fddb828a95bec69ed4f949 t/Pod-Example/00-use.t
+SHA1 7341715004f571555088511943fdb19415332786 t/Pod-Example/01-version.t
+SHA1 0d669e52511fac4b591eb1d6dacc22c7f786085e t/Pod-Example/02-pod_coverage.t
+SHA1 7088d5c992a0d4dfc813cfaf44fa2cb2b969f03b t/Pod-Example/03-pod.t
+SHA1 375c90f1f02ee9b8bd44f84d457a7f691973ba0a t/Pod-Example/04-get.t
+SHA1 5c9c0ac49b1f43f181c6b585bf8de3cdf3d82a0a t/modules/Ex1.pm
+SHA1 9ab09b629fb7691e8410ab5a6805650bba0bee59 t/modules/Ex2.pm
+SHA1 97f219dfa504763deced0f6f13bd5cf21237b9a5 t/modules/Ex3.pm
+SHA1 be47e7d578693fdb8737aa104449b2157421fbbc t/modules/Ex4.pm
+SHA1 f1228ac11d9fb3cf86b15ff792edd71c9b53e513 t/modules/Ex5.pm
+SHA1 9c28b7d2a0660ab372e96a14a7a4b2520d91cdf7 t/modules/Ex6.pm
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEcBAEBAgAGBQJSPWhnAAoJEAwa+cf4dLBa3+oIAI4tVN/MjV65hWE5mpy5mlii
+MPfFPaebBwQh+6Xw/YmkinWGut4E/IUpEf51WXMgU0KKD/YoYBrc9dx5GA+RyeF1
+UFUz+Y2NmUlj4STpYQ8jIIgfsx8diEevlymkQIfUy7dxwQVTYMUee4AA5VdchIdz
+tGFYiqj3+LL6T+4ifrB0xzGhC+//L2IQZKjQhevu0Mr+QdgE/hpFhkSaVVY3o2p3
+v4nJ/pPNiPHQFd0PHYxSpvGUXEiK7uJkLOQJnaxNN3n+NUpK9tuZwT2MyRu5z3Dw
+G67XcRwwugEiZkDldJYXrl5hErgmpHWxaT12u1Ysm2LKXarzdYKT6n1WIhm4SzM=
+=GwaM
+-----END PGP SIGNATURE-----
