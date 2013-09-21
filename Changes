@@ -1,17 +1,18 @@
 0.04
-- Add Test::NoWarnings to tests.
-- Rename CHANGES to Changes.
+ - Add Test::NoWarnings to tests.
+ - Rename CHANGES to Changes.
+ - Rewrite Changes file to CPAN::Changes::SPEC format.
 
-0.03 (July 16, 2012)
-- New version of build system.
-- Implement sections() subroutine.
-- Add examples/ directory.
-- Fix Makefile.PL to META 1.4.
+0.03 2012-07-16
+ - New version of build system.
+ - Implement sections() subroutine.
+ - Add examples/ directory.
+ - Fix Makefile.PL to META 1.4.
 
-0.02 (August 1, 2011)
-- Add check for noexistent Perl module. Add test for it.
-- Rewrite 03-pod.t to better version for Perl 5.6.
-- Remove "(3pm)" from pod doc.
+0.02 2011-08-01
+ - Add check for noexistent Perl module. Add test for it.
+ - Rewrite 03-pod.t to better version for Perl 5.6.
+ - Remove "(3pm)" from pod doc.
 
-0.01 (July 15, 2011)
-- First version.
+0.01 2011-07-15
+ - First version.
