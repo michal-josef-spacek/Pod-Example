@@ -10,6 +10,7 @@ abstract 'Module for getting example from POD.';
 author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'Pod-Example';
+readme_from 'Example.pm';
 requires 'Error::Pure' => 0.08;
 requires 'Exporter' => 0;
 requires 'Module::Info' => 0;

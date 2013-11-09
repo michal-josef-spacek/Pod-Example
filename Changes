@@ -1,4 +1,5 @@
 0.05
+ - Add 'readme_from' directive to Makefile.PL.
  - Add LICENSE.
  - Add dependency for perl (based on Error::Pure).
 
