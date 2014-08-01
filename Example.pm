@@ -187,9 +187,11 @@ Pod::Example - Module for getting example from POD.
 =item C<get($file_or_module[, $section[, $number_of_example]])>
 
  Returns code of example.
- $file_or_module - File with pod doc or perl module.
- $section - Pod section with example. Default value is 'EXAMPLE'.
- $number_of_example - Number of example. Default value is first example.
+ $file_or_module    - File with pod doc or perl module.
+ $section           - Pod section with example. Default value is 'EXAMPLE'.
+ $number_of_example - Number of example. If exists 'EXAMPLE1' and 'EXAMPLE2'
+                      sections, then this number is '1' or '2'.
+                      Default value is nothing.
 
 =item C<sections($file_or_module[, $section])>
 
