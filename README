@@ -19,7 +19,10 @@ SUBROUTINES
              $section - Pod section with example. Default value is 'EXAMPLE'.
 
 ERRORS
-     Mine:
+     get():
+             Cannot open pod file or Perl module.
+
+     sections():
              Cannot open pod file or Perl module.
 
 EXAMPLE1

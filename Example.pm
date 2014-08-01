@@ -201,7 +201,10 @@ Pod::Example - Module for getting example from POD.
 
 =head1 ERRORS
 
- Mine:
+ get():
+         Cannot open pod file or Perl module.
+
+ sections():
          Cannot open pod file or Perl module.
 
 =head1 EXAMPLE1
