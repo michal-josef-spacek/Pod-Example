@@ -23,6 +23,7 @@ t/modules/Ex3.pm
 t/modules/Ex4.pm
 t/modules/Ex5.pm
 t/modules/Ex6.pm
+t/modules/Ex7.pm
 t/Pod-Example/00-use.t
 t/Pod-Example/01-version.t
 t/Pod-Example/02-pod_coverage.t

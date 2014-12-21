@@ -67,8 +67,16 @@ sub _get_content {
 	}
 
 	# Get pod.
-	my @child = $pod_section->children;
-	my $child_pod = join '', map { $_->pod } @child;
+	my $child_pod = $EMPTY_STR;
+	foreach my $child ($pod_section->children) {
+
+		# Skip =begin html.
+		if ($child->type eq 'begin' && $child->body =~ m/^html/ms) {
+			next;
+		}
+
+		$child_pod .= $child->pod;
+	}
 
 	# Remove spaces and return.
 	return _remove_spaces($child_pod);
