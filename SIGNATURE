@@ -14,43 +14,45 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 4201756f430e489898286321b6f20590a5168da6 Changes
-SHA1 8f9e36f69d6738726675233bdb3b02ea15dc3c33 Example.pm
-SHA1 2d49b4efadb9b39d155ab66fb8cd6b30639f78d7 LICENSE
-SHA1 f632f0f5ef8096add05c668689d8a4f417723ffd MANIFEST
-SHA1 f2842dff73baea6654aeec18703e71afa9210642 META.yml
-SHA1 2a6e56bcce4c230c456cde8ec1c6abb435561b06 Makefile.PL
-SHA1 a46b1b904e1c30fcee4b13e2ed78d383d398f6f4 README
+SHA1 b04fd722af84a9e268300aa86ab7b4e82dffd13a Changes
+SHA1 f45c386a5f7bc9bbd4e89ef51e54dc5f562435e0 Example.pm
+SHA1 e274f86dfcc92b6d3243fe3e117da1e4cdfab6c3 LICENSE
+SHA1 36fd4a827e816811713e93328867ab6fff2aa233 MANIFEST
+SHA1 7c5bfa650abfaecfcc920c1df943f1ab2d392658 META.yml
+SHA1 2bed2a06b7792761a88f9b3ea59baa45b70fe74b Makefile.PL
+SHA1 87752eeec5e9de5cf4aab04ccb48a71757c212ee README
 SHA1 b945b0700d46791e1fdc605567b65cf38c05c0ad examples/ex1.pl
 SHA1 cd17d2deadc3f9b92f1dce8027e4574c699e88d9 examples/ex2.pl
-SHA1 4f7982f7e554df23debce735ab343d88d7355140 inc/Module/Install.pm
-SHA1 c68c85ca62ae30d83f633975cd9af2a0789f59e0 inc/Module/Install/Base.pm
-SHA1 4797fd314e2653a427e725104704b0320993ba8c inc/Module/Install/Can.pm
-SHA1 b771d93af2bfc41273f48fa36082bf1bd6f21dbe inc/Module/Install/Fetch.pm
-SHA1 f4f3258a505a432a58cbcdc1fd030ef5e8e90985 inc/Module/Install/Makefile.pm
-SHA1 100a0dd8572f0b40373350fdd6c0a6f035d9dc39 inc/Module/Install/Metadata.pm
+SHA1 d2664c57b65686abbfbbe1e71229761625be4922 inc/Module/Install.pm
+SHA1 da41a8d9904f7b409b49a5f6c338d3eb305a2b4b inc/Module/Install/Base.pm
+SHA1 0db0afe19cd298abba248fa089e5525bd5ab3ab6 inc/Module/Install/Can.pm
+SHA1 e7152bfd5ca67d0e33f96d09c59d600bca5c1f15 inc/Module/Install/Fetch.pm
+SHA1 29ee1cb0dc262b00983e3a2f5cf00b538dff5069 inc/Module/Install/Makefile.pm
+SHA1 e963f80cfe255f16e55067d1feb6841cff3ed2fe inc/Module/Install/Metadata.pm
 SHA1 79f5b4199f622e8b05aac266b0c39f6a85bb303f inc/Module/Install/ReadmeFromPod.pm
-SHA1 4490fed943f4e556db9fd054b7ec8765ca417f7d inc/Module/Install/Win32.pm
-SHA1 8464ddf690b9f7036a0974ff172ec0ced2f6a329 inc/Module/Install/WriteAll.pm
+SHA1 65a1f09af1f4f9e47a98b6b45667c328b1b2f9c0 inc/Module/Install/Win32.pm
+SHA1 f191c49475b3f51775180cd4f7e41e3bdab7f85a inc/Module/Install/WriteAll.pm
 SHA1 6b2b8eeb21b564cbe1fddb828a95bec69ed4f949 t/Pod-Example/00-use.t
-SHA1 9b4f018af0fd59ad203ff89253d788694e3dd988 t/Pod-Example/01-version.t
+SHA1 209092a395a2e7d0edef9fe238ca8d082f3c0dd9 t/Pod-Example/01-version.t
 SHA1 0d669e52511fac4b591eb1d6dacc22c7f786085e t/Pod-Example/02-pod_coverage.t
 SHA1 7088d5c992a0d4dfc813cfaf44fa2cb2b969f03b t/Pod-Example/03-pod.t
-SHA1 375c90f1f02ee9b8bd44f84d457a7f691973ba0a t/Pod-Example/04-get.t
+SHA1 3d55c8ebf5c6e32e50c99ef7b0be2b0fc2e89eaf t/Pod-Example/04-get.t
 SHA1 5c9c0ac49b1f43f181c6b585bf8de3cdf3d82a0a t/modules/Ex1.pm
 SHA1 9ab09b629fb7691e8410ab5a6805650bba0bee59 t/modules/Ex2.pm
 SHA1 97f219dfa504763deced0f6f13bd5cf21237b9a5 t/modules/Ex3.pm
 SHA1 be47e7d578693fdb8737aa104449b2157421fbbc t/modules/Ex4.pm
 SHA1 f1228ac11d9fb3cf86b15ff792edd71c9b53e513 t/modules/Ex5.pm
 SHA1 9c28b7d2a0660ab372e96a14a7a4b2520d91cdf7 t/modules/Ex6.pm
+SHA1 0f7f25b54e70eb2e8f7fd31c417c5e649eadefe5 t/modules/Ex7.pm
+SHA1 b259be47549b9c331a99952d79cdf0311d098ce1 t/modules/Ex8.pm
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iQEcBAEBAgAGBQJT203xAAoJEAwa+cf4dLBan1cH/2hKvudZT0yayiWTTWzrZjiD
-7aPT1yG52Ph1xUrW+U2TKqMyx3oOH6x45akROKbXKuYimV4n35g8iyPIkeau8B0g
-uVQqN6ZuvrRRkHh/4PYVkWaS3bMlDslKy+YQWq0C0vGB1aTSTMKIUuIPbcFkMYmk
-giEcuCmCF+60QDbfw6rZ7ybzQxEt9irjdtAEmI/LBkvY1XOBh9fuvpkfDp1mq33F
-sKzR5p6Y7uPUaQZhmnFvxr9WC8C0LBR0iha86teiBR78EqWlK5ZjBBnnWngIyujD
-vjIRZfjtjcqqr71bamrIZOKYbK4rOs3qnbivF8FA9yq2GS3QSGP/TzOHK0VpDk4=
-=tIdt
+iQEcBAEBAgAGBQJUl2JXAAoJEAwa+cf4dLBapH8H/iiE4OIj9i7LNl4R8p4HypMT
+zjR4HkzFG2gXoBzoZGtIPQf0tcazZrUQ+olDGnuNXcdrbrr+BnmyH8mNPdwJ7JTK
+Wx5T/azYkI1zHYIctqbcvo7L6nZgvOWXl2Np3XKE6n9Vn7wAKcB0wukZurLhke39
+UKKVfisYPHFm69BwKd6yFqxKh8Ec9xFG3T8uWL8zgxex1ldo2jgW/1EHFaK4KcuE
+/mYFGcb/koPEODNU6fxZpXrks89vFdHqbbltbpN/x6RmVjxGU1QQmpNfr88130va
+nmUnlarNVpydEl27BHop2YoD5YgHnHLyGKPgcnunbYpxQq03NIkKUUrger6RJXA=
+=uGBd
 -----END PGP SIGNATURE-----
