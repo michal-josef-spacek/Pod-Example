@@ -16,7 +16,7 @@ Readonly::Array our @EXPORT_OK => qw(get sections);
 Readonly::Scalar my $EMPTY_STR => q{};
 
 # Version.
-our $VERSION = 0.07;
+our $VERSION = 0.08;
 
 # Get content for file or module.
 sub get {
@@ -283,6 +283,6 @@ L<http://skim.cz>
 
 =head1 VERSION
 
-0.07
+0.08
 
 =cut
