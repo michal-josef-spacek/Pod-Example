@@ -69,13 +69,22 @@ sub _get_content {
 	# Get pod.
 	my $child_pod = $EMPTY_STR;
 	foreach my $child ($pod_section->children) {
+		if ($child->type eq 'begin') {
 
-		# Skip =begin html.
-		if ($child->type eq 'begin' && $child->body =~ m/^html/ms) {
-			next;
+			# Skip =begin html
+			if ($child->body =~ m/^html/ms) {
+				next;
+
+			# =begin text as commented text.
+			} elsif ($child->body =~ m/^text/ms) {
+				$child_pod .= join "\n",
+					map { ' #'.$_ }
+					split m/\n/ms,
+					($child->children)[0]->pod;
+			}
+		} else {
+			$child_pod .= $child->pod;
 		}
-
-		$child_pod .= $child->pod;
 	}
 
 	# Remove spaces and return.

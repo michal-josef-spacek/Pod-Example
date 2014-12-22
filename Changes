@@ -1,6 +1,7 @@
 0.07
  - Fix LICENSE file.
  - Improve LICENSE AND COPYRIGHT section in doc.
+ - Process =begin text ... =end section from examples.
  - Remove =begin html ... =end section from examples.
  - Update Module::Install to 1.14 version.
 
