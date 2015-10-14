@@ -8,9 +8,16 @@ use inc::Module::Install;
 # Definition.
 abstract 'Module for getting example from POD.';
 author 'Michal Spacek <skim@cpan.org>';
+author_requires 'English' => 0;
+author_requires 'File::Object' => 0.05;
+author_requires 'Test::More' => 0;
+author_requires 'Test::NoWarnings' => 0;
+author_requires 'Test::Pod' => 0;
+author_requires 'Test::Pod::Coverage' => 0;
 license 'bsd';
 name 'Pod-Example';
 readme_from 'Example.pm';
+recursive_author_tests('xt');
 requires 'Error::Pure' => 0.08;
 requires 'Exporter' => 0;
 requires 'Module::Info' => 0;
@@ -25,8 +32,6 @@ test_requires 'English' => 0;
 test_requires 'File::Object' => 0.05;
 test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
-test_requires 'Test::Pod' => 0;
-test_requires 'Test::Pod::Coverage' => 0;
 tests_recursive;
 version '0.08';
 
