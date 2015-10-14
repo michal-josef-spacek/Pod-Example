@@ -1,4 +1,4 @@
-0.08
+0.08 2015-10-14T11:21:19+02:00
  - Add SEE ALSO section to doc.
  - Move author tests to xt/ directory.
  - Update Module::Install to 1.16 version.
