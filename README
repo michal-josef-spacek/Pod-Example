@@ -60,6 +60,13 @@ EXAMPLE2
 DEPENDENCIES
     Error::Pure, Exporter, Module::Info, Pod::Abstract, Readonly.
 
+SEE ALSO
+    pod-example
+        Script to print or run of example from documentation.
+
+    App::Pod::Example
+        Base class for pod-example script.
+
 REPOSITORY
     <https://github.com/tupinek/Pod-Example>
 

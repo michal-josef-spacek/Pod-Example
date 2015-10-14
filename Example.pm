@@ -266,6 +266,20 @@ L<Module::Info>,
 L<Pod::Abstract>,
 L<Readonly>.
 
+=head1 SEE ALSO
+
+=over
+
+=item L<pod-example>
+
+Script to print or run of example from documentation.
+
+=item L<App::Pod::Example>
+
+Base class for pod-example script.
+
+=back
+
 =head1 REPOSITORY
 
 L<https://github.com/tupinek/Pod-Example>
