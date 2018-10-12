@@ -1,11 +1,9 @@
 package Pod::Example;
 
-# Pragmas.
 use base qw(Exporter);
 use strict;
 use warnings;
 
-# Modules.
 use Error::Pure qw(err);
 use Module::Info;
 use Pod::Abstract;
@@ -15,7 +13,6 @@ use Readonly;
 Readonly::Array our @EXPORT_OK => qw(get sections);
 Readonly::Scalar my $EMPTY_STR => q{};
 
-# Version.
 our $VERSION = 0.09;
 
 # Get content for file or module.
@@ -228,11 +225,9 @@ Pod::Example - Module for getting example from POD.
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Pod::Example qw(get);
 
  # Get and print code.
@@ -243,11 +238,9 @@ Pod::Example - Module for getting example from POD.
 
 =head1 EXAMPLE2
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Pod::Example qw(sections);
 
  # Get and print code.

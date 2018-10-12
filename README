@@ -28,11 +28,9 @@ ERRORS
              Cannot open pod file or Perl module.
 
 EXAMPLE1
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Pod::Example qw(get);
 
      # Get and print code.
@@ -42,11 +40,9 @@ EXAMPLE1
      # This example.
 
 EXAMPLE2
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Pod::Example qw(sections);
 
      # Get and print code.
