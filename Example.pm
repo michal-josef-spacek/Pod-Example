@@ -196,24 +196,26 @@ Pod::Example - Module for getting example from POD.
 
 =head1 SUBROUTINES
 
-=over 8
+=head2 C<get>
 
-=item C<get($file_or_module[, $section[, $number_of_example]])>
+ my $example = get($file_or_module[, $section[, $number_of_example]]);
 
- Returns code of example.
+Returns code of example.
+
  $file_or_module    - File with pod doc or perl module.
  $section           - Pod section with example. Default value is 'EXAMPLE'.
  $number_of_example - Number of example. If exists 'EXAMPLE1' and 'EXAMPLE2'
                       sections, then this number can be '1' or '2'.
                       Default value is nothing.
 
-=item C<sections($file_or_module[, $section])>
+=head2 C<sections>
 
- Returns array of example sections.
+ my @sections = sections($file_or_module[, $section]);
+
+Returns array of example sections.
+
  $file_or_module - File with pod doc or perl module.
  $section - Pod section with example. Default value is 'EXAMPLE'.
-
-=back
 
 =head1 ERRORS
 
@@ -285,8 +287,9 @@ L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
- © 2011-2018 Michal Josef Špaček
- BSD 2-Clause License
+© 2011-2018 Michal Josef Špaček
+
+BSD 2-Clause License
 
 =head1 VERSION
 
