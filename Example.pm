@@ -191,6 +191,7 @@ Pod::Example - Module for getting example from POD.
 =head1 SYNOPSIS
 
  use Pod::Example qw(get sections);
+
  my $example = get($file_or_module[, $section[, $number_of_example]]);
  my @sections = sections($file_or_module[, $section]);
 
