@@ -278,7 +278,7 @@ Base class for pod-example script.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/Pod-Example>
+L<https://github.com/michal-josef-spacek/Pod-Example>
 
 =head1 AUTHOR
 

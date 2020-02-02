@@ -33,7 +33,7 @@ requires:
   perl: 5.6.2
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Pod-Example
-  homepage: https://github.com/tupinek/Pod-Example
+  homepage: https://github.com/michal-josef-spacek/Pod-Example
   license: http://opensource.org/licenses/bsd-license.php
-  repository: git://github.com/tupinek/Pod-Example
+  repository: git://github.com/michal-josef-spacek/Pod-Example
 version: '0.09'
