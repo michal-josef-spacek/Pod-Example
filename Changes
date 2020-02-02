@@ -1,6 +1,7 @@
 0.09
  - Add test for sections subroutine.
  - Change =item to =head2 in METHODS section in doc.
+ - Fix Makefile.PL fails with no '.' in @INC.
  - Remove trivial comments.
  - Update Module::Install readme_from.
  - Update Module::Install to 1.19 version.
