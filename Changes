@@ -1,4 +1,5 @@
 0.09
+ - Add test for sections subroutine.
  - Change =item to =head2 in METHODS section in doc.
  - Remove trivial comments.
  - Update Module::Install readme_from.

@@ -3,7 +3,6 @@ TODO
 1. Algoritmus odstraneni opakujicich se mezer presunout do nejakeho Text::*
    modulu.
    Text::Outdent - otestovat muj algoritmus oproti tomuto.
-3. Testy pro sections().
 4. Slo by testovat ten kod v prikladu?
 5.
 
@@ -11,3 +10,6 @@ Applied
 =======
 2. Funkce pro zjisteni poctu prikladu v modulu.
 OK [20120515] skim
+
+3. Testy pro sections().
+OK [20200202] skim
