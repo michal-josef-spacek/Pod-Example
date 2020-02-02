@@ -1,4 +1,4 @@
-0.09
+0.09 2020-02-02T18:44:41+01:00
  - Add test for sections subroutine.
  - Change =item to =head2 in METHODS section in doc.
  - Fix Makefile.PL fails with no '.' in @INC.
