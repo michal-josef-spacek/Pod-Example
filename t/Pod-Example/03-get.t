@@ -13,7 +13,6 @@ BEGIN {
 	$modules_dir = File::Object->new->up->dir('modules');
 	unshift @INC, $modules_dir->s;	
 }
-use Ex1;
 
 # Test.
 my $ret = get('Ex1');
