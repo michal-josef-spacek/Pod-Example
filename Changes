@@ -1,4 +1,6 @@
 0.1
+ - Rewrite from usage of Module::Info to Pod::Find. Resolves issue with
+   looking POD documentation in .pod files.
 
 0.09 2020-02-02T18:44:41+01:00
  - Add test for sections subroutine.

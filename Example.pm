@@ -5,8 +5,8 @@ use strict;
 use warnings;
 
 use Error::Pure qw(err);
-use Module::Info;
 use Pod::Abstract;
+use Pod::Find qw(pod_where);
 use Readonly;
 
 # Constants.
@@ -129,11 +129,10 @@ sub _pod_abstract {
 
 	# Module.
 	} else {
-		my $mod = Module::Info->new_from_module($file_or_module);
-		if (! $mod) {
+		$file = pod_where({ -inc => 1 }, $file_or_module);
+		if (! $file) {
 			err 'Cannot open pod file or Perl module.';
 		}
-		$file = $mod->file;
 	}
 
 	# Get and return pod.
@@ -258,8 +257,8 @@ Returns array of example sections.
 
 L<Error::Pure>,
 L<Exporter>,
-L<Module::Info>,
 L<Pod::Abstract>,
+L<Pod::Find>,
 L<Readonly>.
 
 =head1 SEE ALSO

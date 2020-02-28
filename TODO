@@ -4,8 +4,6 @@ TODO
    modulu.
    Text::Outdent - otestovat muj algoritmus oproti tomuto.
 4. Slo by testovat ten kod v prikladu?
-5. Nekdy se stane, ze dokumentace je v .pod souboru namisto .pm. Aktualni kod
-   nenajde dokumentaci. Viz Parse::DMIDecode::Examples
 6.
 
 Applied
@@ -14,4 +12,8 @@ Applied
 OK [20120515] skim
 
 3. Testy pro sections().
+OK [20200202] skim
+
+5. Nekdy se stane, ze dokumentace je v .pod souboru namisto .pm. Aktualni kod
+   nenajde dokumentaci. Viz Parse::DMIDecode::Examples
 OK [20200202] skim
