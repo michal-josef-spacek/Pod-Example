@@ -4,7 +4,7 @@ use warnings;
 use English qw(-no_match_vars);
 use File::Object;
 use Pod::Example qw(get);
-use Test::More 'tests' => 15;
+use Test::More 'tests' => 16;
 use Test::NoWarnings;
 
 # Load module.
@@ -25,6 +25,10 @@ print "Foo.\n";
 END
 chomp $right_ret;
 is($ret, $right_ret, 'Example from module (.pm).');
+
+# Test.
+$ret = get('Ex9');
+is($ret, $right_ret, 'Example from module (.pod).');
 
 # Test.
 $ret = get($modules_dir->file('Ex2.pm')->s);
