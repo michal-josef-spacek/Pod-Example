@@ -24,7 +24,7 @@ use warnings;
 print "Foo.\n";
 END
 chomp $right_ret;
-is($ret, $right_ret, 'Example.');
+is($ret, $right_ret, 'Example from module (.pm).');
 
 # Test.
 $ret = get($modules_dir->file('Ex2.pm')->s);
