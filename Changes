@@ -1,4 +1,4 @@
-0.1
+0.10 2020-02-28T13:57:54+01:00
  - Rewrite from usage of Module::Info to Pod::Find. Resolves issue with
    looking POD documentation in .pod files.
 
