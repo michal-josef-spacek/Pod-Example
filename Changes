@@ -1,5 +1,6 @@
 0.11
  - Add test for documentation from .pod file.
+ - Fix detecting of sections.
  - We don't need to load module to detect documentation in it. In tests.
 
 0.10 2020-02-28T13:57:54+01:00

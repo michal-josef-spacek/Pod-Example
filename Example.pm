@@ -68,16 +68,16 @@ sub _get_content {
 	foreach my $child ($pod_section->children) {
 		if ($child->type eq 'begin') {
 
-			# Skip =begin html
-			if ($child->body =~ m/^html/ms) {
-				next;
-
 			# =begin text as commented text.
-			} elsif ($child->body =~ m/^text/ms) {
+			if ($child->body =~ m/^text/ms) {
 				$child_pod .= join "\n",
 					map { ' #'.$_ }
 					split m/\n/ms,
 					($child->children)[0]->pod;
+
+			# Skip =begin html and other unsupported sections.
+			} else {
+				next;
 			}
 		} else {
 			$child_pod .= $child->pod;
