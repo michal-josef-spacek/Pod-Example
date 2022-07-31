@@ -32,7 +32,7 @@ requires:
   Readonly: 0
   perl: 5.6.2
 resources:
-  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Pod-Example
+  bugtracker: https://github.com/michal-josef-spacek/Pod-Example/issues
   homepage: https://github.com/michal-josef-spacek/Pod-Example
   license: http://opensource.org/licenses/bsd-license.php
   repository: git://github.com/michal-josef-spacek/Pod-Example
