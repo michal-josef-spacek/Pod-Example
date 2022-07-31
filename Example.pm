@@ -242,6 +242,8 @@ Returns array of example sections.
 
 =head1 EXAMPLE1
 
+=for comment filename=print_example.pl
+
  use strict;
  use warnings;
 
@@ -254,6 +256,8 @@ Returns array of example sections.
  # This example.
 
 =head1 EXAMPLE2
+
+=for comment filename=print_sections.pl
 
  use strict;
  use warnings;
