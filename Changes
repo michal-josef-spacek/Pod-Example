@@ -1,4 +1,6 @@
 0.12
+ - Add support for definition of example filename in doc defined by POD
+   comment.
  - Move issues to Github.
  - Update copyright years.
 
