@@ -4,7 +4,8 @@ TODO
    modulu.
    Text::Outdent - otestovat muj algoritmus oproti tomuto.
 4. Slo by testovat ten kod v prikladu?
-6.
+6. Add support for =head1 EXAMPLES + =head2 EXAMPLE1 + =head2 EXAMPLE2
+7.
 
 Applied
 =======
