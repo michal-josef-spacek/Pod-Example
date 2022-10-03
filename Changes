@@ -1,4 +1,5 @@
 0.13
+ - Add test for sections() with two example sections.
 
 0.12 2022-07-31T23:34:46+02:00
  - Add names for examples.
