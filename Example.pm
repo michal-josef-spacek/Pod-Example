@@ -82,7 +82,7 @@ sub _get_content {
 			}
 		} elsif ($child->type eq 'for') {
 			my $body = $child->body;
-			if ($body =~ m/^comment\s*filename=([\w\.]+)\s*$/ms) {
+			if ($body =~ m/^comment\s*filename=([\w\-\.]+)\s*$/ms) {
 				$example_filename = $1;
 			}
 		} else {
