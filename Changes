@@ -1,5 +1,6 @@
 0.14
  - Update copyright years.
+ - Update Module::Install to 1.21 version.
 
 0.13 2022-12-10T16:20:05+01:00
  - Add test for sections() with two example sections.
