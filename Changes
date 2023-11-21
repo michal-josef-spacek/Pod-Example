@@ -1,5 +1,6 @@
 0.14
  - Add test for parse example with pod comment.
+ - Remove nonsense code.
  - Update Module::Install to 1.21 version.
  - Update copyright years.
  - Update minimal dependency of File::Object.

@@ -93,7 +93,7 @@ sub _get_content {
 	# Remove spaces and return.
 	my $ret = _remove_spaces($child_pod);
 
-	return wantarray ? ($ret, $example_filename) : $ret;
+	return ($ret, $example_filename);
 }
 
 # Get section name.
