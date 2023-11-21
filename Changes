@@ -1,6 +1,7 @@
 0.14
  - Update Module::Install to 1.21 version.
  - Update copyright years.
+ - Update minimal dependency of File::Object.
 
 0.13 2022-12-10T16:20:05+01:00
  - Add test for sections() with two example sections.
