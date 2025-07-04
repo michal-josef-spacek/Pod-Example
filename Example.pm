@@ -13,7 +13,7 @@ use Readonly;
 Readonly::Array our @EXPORT_OK => qw(get sections);
 Readonly::Scalar my $EMPTY_STR => q{};
 
-our $VERSION = 0.15;
+our $VERSION = 0.16;
 
 # Get content for file or module.
 sub get {
@@ -312,6 +312,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.15
+0.16
 
 =cut
