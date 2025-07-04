@@ -1,5 +1,6 @@
 0.15
  - Fix MANIFEST file.
+ - Update copyright years.
 
 0.14 2023-11-21T13:54:12+01:00
  - Add test for parse example with pod comment.
